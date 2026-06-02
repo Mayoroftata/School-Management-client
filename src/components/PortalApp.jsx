@@ -21,7 +21,7 @@ const api = {
             const token = getAuthToken();
             if (token) headers["Authorization"] = `Bearer ${token}`;
         }
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api"}${endpoint}`, { headers });
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://school-server-rd0y.onrender.com0/api"}${endpoint}`, { headers });
         return response.json();
     },
 
@@ -31,7 +31,7 @@ const api = {
             const token = getAuthToken();
             if (token) headers["Authorization"] = `Bearer ${token}`;
         }
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000/api"}${endpoint}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://school-server-rd0y.onrender.com0/api"}${endpoint}`, {
             method: "POST",
             headers,
             body: JSON.stringify(data)
